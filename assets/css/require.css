@@ -582,3 +582,99 @@ body.loaded { overflow: visible; }
   font-size: 20px;
   margin-bottom: 8px;
 }
+/* Container for the education section */
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust columns */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Individual card design */
+.education-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Image styling */
+.card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Fully rounded image */
+  object-fit: cover;
+}
+
+/* Card content */
+.card-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-details h2 {
+  font-size: 1.8rem; /* Adjusted for responsiveness */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-details p {
+  font-size: 1.2rem; /* Slightly smaller for better readability on mobile */
+  color: #666;
+  margin: 5px 0;
+}
+
+.card-details p span {
+  font-weight: bold;
+  color: orangered;
+  font-size: 1.4rem;
+  display: inline;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+  .card-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-details p {
+    font-size: 1rem;
+  }
+
+  .card-details p span {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .education-container {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .education-card {
+    padding: 15px;
+  }
+
+  .card-details h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-details p {
+    font-size: 0.9rem;
+  }
+
+  .card-details p span {
+    font-size: 1rem;
+  }
+}
